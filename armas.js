@@ -1,4 +1,4 @@
-class Armas {
+class Arma {
     constructor(nombre, tipo){
         this.nombre = nombre;
         this.tipo = tipo;
@@ -13,7 +13,7 @@ class Armas {
     }
 }
 
-export class ArmasFilo extends Armas{
+export class ArmaFilosa extends Arma{
     constructor(nombre, tipo, longitud, filo){
         super(nombre, tipo)
         this.longitud = longitud;
@@ -26,7 +26,7 @@ export class ArmasFilo extends Armas{
 }
 
 
-export class ArmasContundentes extends Armas{
+export class ArmaContundente extends Arma{
     constructor(nombre, tipo, peso){
         super(nombre, tipo);
         this.peso = peso
