@@ -3,14 +3,6 @@ class Arma {
         this.nombre = nombre;
         this.tipo = tipo;
     }
-
-    obtenerTipo(){
-        return this.tipo
-    }
-
-    obtenerValorAtaque(){
-        return 0;
-    }
 }
 
 export class ArmaFilosa extends Arma{
@@ -18,10 +10,7 @@ export class ArmaFilosa extends Arma{
         super(nombre, tipo)
         this.longitud = longitud;
         this.filo = filo;
-    }
-
-    obtenerValorAtaque(){
-        return this.filo * this.longitud
+        this.valorAtaque = this.filo * this.longitud
     }
 }
 
@@ -29,12 +18,8 @@ export class ArmaFilosa extends Arma{
 export class ArmaContundente extends Arma{
     constructor(nombre, tipo, peso){
         super(nombre, tipo);
-        this.peso = peso
-    }
-
-    obtenerValorAtaque(){
-        return this.peso
-    }
+        this.peso = peso;
+        this.valorAtaque = peso;
 
 }
-
+}
