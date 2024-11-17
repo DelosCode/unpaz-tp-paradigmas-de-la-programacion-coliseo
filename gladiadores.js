@@ -8,12 +8,14 @@ class Gladiador {
 
     agregarArma(armaNueva){
         this.armas.push(armaNueva)
-        return `Arma "${armaNueva.nombre}" agregada con éxito.`
+
+        return `\nArma "${armaNueva.nombre}" agregada con éxito.\n`
     }
 
     agregarArmadura(armaduraNueva){
         this.armaduras.push(armaduraNueva);
-        return `Armadura "${armaduraNueva.tipo}" agregada con éxito.`
+        return `Armadura "${armaduraNueva.tipo}" agregada con éxito.\n`
+
     }
 
     obtenerPuntosArmadura(){
@@ -57,7 +59,8 @@ export class Mirmillon extends Gladiador{
         if (this.armas.length == 0){
             return super.agregarArma(armaNueva)
         } else {
-            return `Inventario lleno, Los gladiadores Mirmillon no pueden tener más de un arma. Arma actual: ${this.armas[0].nombre}`
+            
+            return `\nInventario lleno, Los gladiadores Mirmillon no pueden tener más de un arma. Arma actual: ${this.armas[0].nombre}\n`
         }
     }
 
@@ -66,7 +69,7 @@ export class Mirmillon extends Gladiador{
             return super.agregarArmadura(armaduraNueva)
         } else {
             return `El inventario está lleno o el gladiador ya posee la armadura. 
-        Armaduras actuales: ${this.armaduras.map((armadura) => armadura.tipo).join(", ")}`
+            Armaduras actuales: ${this.armaduras.map((armadura) => armadura.tipo).join(", ")}\n`
         }
     }
 
@@ -99,17 +102,17 @@ export class Dimachaerus extends Gladiador{
         if (this.armas.length < 3){
             return super.agregarArma(armaNueva)
         } else {
-            let armasActuales = this.armas.map((arma) => arma.nombre).join(", ")
-            return `Inventario lleno, Los gladiadores Dimachaerus no pueden tener más de 3 armas. Armas actuales: ${armasActuales}.`
+            let armasActuales = this.armas.map((arma) => arma.nombre).join(", ")   
+            return `\nInventario lleno, Los gladiadores Dimachaerus no pueden tener más de 3 armas. Armas actuales: ${armasActuales}.\n`
         }
     }
 
     agregarArmadura(armaduraNueva){
-        return `El guerrero Dimachaerus no utiliza armadura.`
+        return `El guerrero Dimachaerus no utiliza armadura.\n`
     }
 
-    aumentarDestreza(){
-        return `Al no poseer armadura, no se puede aumentar la destreza del Dimachaerus (lo puedes hacer en su creación)`
+    aumentarDestreza(){  
+        return `Al no poseer armadura, no se puede aumentar la destreza del Dimachaerus (lo puedes hacer en su creación).\n`
     }
 
     obtenerDefensa(){
@@ -122,7 +125,7 @@ export class Dimachaerus extends Gladiador{
 
     atacar(rival){
         super.atacar(rival)
-        this.destreza ++;
+        this.destreza =+ 1;
     }
 
 

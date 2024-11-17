@@ -12,7 +12,7 @@ let daga = new ArmaFilosa("Daga", "Arma de filo", 10, 0.3)
 let hacha = new ArmaFilosa("Hacha", "Arma de filo", 14, 0.5)
 
 let maza = new ArmaContundente("Maza", "Arma contundente", 25)
-let martillo = new ArmaContundente("Martillo", "Arma contundente", 15)
+let martillo = new ArmaContundente("Martillo", "Arma contundente", 25)
 
 // Instanciamos las armaduras
 
@@ -22,7 +22,7 @@ let casco = new Casco("Casco")
 // Instanciamos a los gladiadores
 
 let mirmillon = new Mirmillon("Mirmillon", 20)
-let dimachaerus  = new Dimachaerus("Dimachaerus", 15)
+let dimachaerus  = new Dimachaerus("Dimachaerus", 20)
 
 // Pruebas de los m√©todos de los gladiadores
 
@@ -38,7 +38,7 @@ console.log(dimachaerus.agregarArma(maza)) // Los Dimachaerus no pueden tener m√
 
 // Agregar Armaduras
 console.log(mirmillon.agregarArmadura(escudo))
-console.log(mirmillon.agregarArmadura(casco))
+// console.log(mirmillon.agregarArmadura(casco))
 
 console.log(dimachaerus.agregarArmadura(escudo)) // Los Dimachaerus no utilizan armaduras
 
