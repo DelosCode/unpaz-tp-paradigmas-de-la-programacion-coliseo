@@ -39,7 +39,9 @@ class Gladiador {
     }
 
     atacar(rival){
-        this.rival.vida -= (this.obtenerPoderAtaque() - rival.obtenerDefensa());
+
+        let danio = (this.obtenerPoderAtaque() - rival.obtenerDefensa());
+        rival.vida -= danio > 0 ? danio : 0
     }
 }
 
@@ -94,11 +96,11 @@ export class Dimachaerus extends Gladiador{
     }
 
     agregarArma(armaNueva){
-        if (this.armas.length <= 3){
+        if (this.armas.length < 3){
             return super.agregarArma(armaNueva)
         } else {
             let armasActuales = this.armas.map((arma) => arma.nombre).join(", ")
-            return `Inventario lleno, Los gladiadores Dimachaerus no pueden tener más de 3 armas. Armas actuales: ${armasActuales}`
+            return `Inventario lleno, Los gladiadores Dimachaerus no pueden tener más de 3 armas. Armas actuales: ${armasActuales}.`
         }
     }
 
@@ -119,8 +121,8 @@ export class Dimachaerus extends Gladiador{
     }
 
     atacar(rival){
-        super.atacar()
-        this.destreza += 1;
+        super.atacar(rival)
+        this.destreza ++;
     }
 
 
